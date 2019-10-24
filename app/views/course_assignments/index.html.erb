@@ -16,8 +16,8 @@
     <% @course_assignments.each do |course_assignment| %>
       <tr>
         <td><%= course_assignment.section %></td>
-        <td><%= course_assignment.professor_id %></td>
-        <td><%= course_assignment.course_id %></td>
+        <td><%= course_assignment.professor.name %></td>
+        <td><%= course_assignment.course.name %></td>
         <td><%= link_to 'Show', course_assignment %></td>
         <td><%= link_to 'Edit', edit_course_assignment_path(course_assignment) %></td>
         <td><%= link_to 'Destroy', course_assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
