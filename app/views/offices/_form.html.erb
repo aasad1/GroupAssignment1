@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :professor_id %>
-    <%= form.text_field :professor_id %>
+    <%= form.collection_select :professor_id, Professor.all, :id, :name %>
   </div>
 
   <div class="actions">
